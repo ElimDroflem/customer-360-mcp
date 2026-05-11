@@ -28,6 +28,28 @@ A junior agent sees the customer's email redacted (`a***@acmecorp.example`) and 
 
 ---
 
+## Demo
+
+![Claude Desktop calling get_customer_360 and producing the analysis](screenshots/02a-claude-tool-call-analysis.png)
+
+Claude Desktop invokes the `customer-360` MCP tool and produces a structured analysis of customer Alice Henderson — the open £450 dispute, the comms history, the active risk flags.
+
+![Recommended actions output](screenshots/02b-claude-recommended-actions.png)
+
+The action list Claude generates from the stitched response — concrete, prioritised next steps a senior agent at a fintech could act on directly.
+
+### Scoping at the server, not the agent
+
+![Junior agent view](screenshots/03a-scoping-junior.png)
+
+**Junior agent:** email redacted to `a***@acmecorp.example`, risk flags returned without `notes`.
+
+![Senior agent view](screenshots/03b-scoping-senior.png)
+
+**Senior agent:** full email and unredacted risk flag notes. Same tool, same customer, same backends — the server enforces the access control, so the AI literally cannot see what the server doesn't return.
+
+---
+
 ## How it's wired
 
 ```
